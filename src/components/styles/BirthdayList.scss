@@ -1,0 +1,32 @@
+
+.table {
+  &__head,
+  &__body {
+    display: grid;
+    grid-template-rows: auto;
+    grid-row-gap: 0.25rem;
+  }
+
+  &__row {
+    border-radius: 3px;
+    border: 1px solid var(--bs-gray-200);
+    background-color: #fff;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: minmax(10px, 0.5fr) minmax(100px, 3fr);
+    grid-column-gap: 0.5rem;
+    align-items: center;
+  }
+
+  &__head {
+    border-bottom: none;
+
+    .table__row {
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      font-weight: 600;
+      border: none;
+    }
+  }
+}
