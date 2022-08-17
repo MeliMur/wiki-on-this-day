@@ -23,7 +23,9 @@ export const App: React.FC = observer(() => {
             <button className='btn btn--primary' onClick={fetchBirths}>Fetch data</button>
             {isLoading && 'loading...'}
             {!isLoading && <BirthDayList birthDays={birthDays}/>}
-            <Modal onClose={onModalClose} show={showError} title={'Something went wrong...'}>{error}</Modal>
+            <Modal onClose={onModalClose} show={showError} title={'Something went wrong...'}>
+                <span className='error'>{error}</span>
+            </Modal>
         </div>
     );
 })
